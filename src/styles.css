@@ -1,0 +1,41 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Breed List Styles */
+ul.breed-list {
+    list-style: none;
+    padding: 0;
+}
+
+li.breed-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+}

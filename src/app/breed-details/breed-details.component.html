@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Dog Breed Details</h1>
+    <input type="text" [(ngModel)]="searchTerm" (keydown.enter)="searchBreed()" placeholder="Enter breed name">
+    <button (click)="searchBreed()">Search</button>
+
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
+    <div *ngIf="breedDetails">
+        <div>
+            <img [src]="breedDetails.image" alt="Breed Image">
+        </div>
+        <div>
+            <h2>{{ breedDetails.breed }}</h2>
+            <p><strong>Bred for:</strong> {{ breedDetails.bredFor }}</p>
+            <p><strong>Breed group:</strong> {{ breedDetails.breedGroup }}</p>
+            <p><strong>Origin:</strong> {{ breedDetails.origin }}</p>
+        </div>
+    </div>
+</div>

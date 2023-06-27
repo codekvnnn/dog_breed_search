@@ -1,0 +1,16 @@
+<h1>Search Dog Breed Here!</h1>
+
+<div class="container">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Enter breed name">
+    <button class="search-button" (click)="searchBreed()">Search</button>
+</div>
+
+<div *ngIf="breedDetails">
+    <h2>{{ breedDetails.name }}</h2>
+    <p><strong>Bred For:</strong> {{ breedDetails.bred_for }}</p>
+    <p><strong>Breed Group:</strong> {{ breedDetails.breed_group }}</p>
+    <p><strong>Origin:</strong> {{ breedDetails.origin }}</p>
+    <img [src]="breedDetails.image?.url" alt="{{ breedDetails.name }}" />
+</div>
+
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
